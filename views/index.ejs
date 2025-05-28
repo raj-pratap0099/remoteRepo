@@ -2,10 +2,19 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= title %></title>
+    <title>Profile</title>
+    <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
-
+    <div class="profile-container">
+        <h1><%= user.name %>'s Profile</h1>
+        <img src="<%= user.avatarUrl %>" alt="Profile Picture" class="profile-avatar">
+        <ul class="profile-details">
+            <li><strong>Email:</strong> <%= user.email %></li>
+            <li><strong>Username:</strong> <%= user.username %></li>
+            <li><strong>Joined:</strong> <%= user.joinedDate %></li>
+        </ul>
+        <a href="/logout">Logout</a>
+    </div>
 </body>
 </html>
